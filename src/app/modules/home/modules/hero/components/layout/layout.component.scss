@@ -1,0 +1,24 @@
+.layout {
+  display: flex;
+  margin-bottom: 16px;
+
+  &_left {
+    flex: 1 1 22.5%;
+  }
+
+  &_center {
+    flex: 1 1 50%;
+    padding: 0 15px;
+  }
+
+  &_right {
+    flex: 1 1 22.5%;
+  }
+}
+.divider {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ababab;
+}

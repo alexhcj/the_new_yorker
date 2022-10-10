@@ -1,0 +1,18 @@
+<div class="posts">
+  <ng-container *ngIf="rightPosts; else emptyPosts">
+    <div class="post" *ngFor="let post of rightPosts">
+      <div class="post-content">
+        <span class="category">{{post.category}}</span>
+        <h3 class="title">{{post.title}}</h3>
+        <div>
+          By <span class="author">{{post.author}}</span>
+        </div>
+      </div>
+      <div class="post-img"></div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyPosts>
+    <div>Empty posts</div>
+  </ng-template>
+</div>

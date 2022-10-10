@@ -1,0 +1,10 @@
+@import '../../../../shared/styles/vars';
+
+.page-home {
+  position: relative;
+}
+.container {
+  margin: 0 auto;
+  max-width: $container-xxl;
+  width: 100%;
+}

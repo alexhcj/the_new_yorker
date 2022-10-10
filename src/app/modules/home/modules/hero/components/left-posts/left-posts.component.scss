@@ -1,0 +1,40 @@
+@import '../../../../../../shared/styles/vars';
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  border-right: 1px solid $color-border;
+}
+.post {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $color-border;
+}
+.post-img {
+  margin-bottom: 16px;
+  height: 255px;
+}
+.category {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: $color-red;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.title {
+  display: flex;
+  margin-bottom: 16px;
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    color: $color-black;
+  }
+}

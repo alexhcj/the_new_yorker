@@ -1,0 +1,18 @@
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post-content {
+  display: flex;
+  flex-direction: column;
+}
+.post-img {
+  width: 192px;
+  height: 144px;
+  background-color: #ababab;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}

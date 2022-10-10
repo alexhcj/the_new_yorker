@@ -1,0 +1,19 @@
+<div class="posts">
+  <ng-container *ngIf="leftPosts; else emptyPosts">
+    <div class="post" *ngFor="let post of leftPosts">
+      <img class="post-img" src="{{post.img}}" alt="{{post.title}}">
+      <a class="category" routerLink="/">{{post.category}}</a>
+      <h3 class="title">
+        <a class="title__link" routerLink="/">{{post.title}}</a>
+      </h3>
+      <p class="body">{{post.body}}</p>
+      <div>
+        By <span class="author">{{post.author}}</span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyPosts>
+    <div>Empty posts</div>
+  </ng-template>
+</div>

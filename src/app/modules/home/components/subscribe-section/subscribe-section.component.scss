@@ -1,0 +1,32 @@
+.subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 8px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+
+  &__text {
+    font-size: 20px;
+    color: #000000;
+  }
+
+  &__button {
+    margin-left: 8px;
+    font-size: 20px;
+    color: #0879bf;
+
+    &:hover {
+      color: #666666;
+    }
+  }
+}
+.text-company {
+  font-style: italic;
+}
+.logo-standard {
+  margin-right: 16px;
+  max-width: 75px;
+  max-height: 75px;
+}

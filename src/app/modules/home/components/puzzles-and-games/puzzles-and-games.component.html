@@ -1,0 +1,16 @@
+<div class="puzzles-and-games">
+  <h2 class="puzzles-and-games__title">Puzzles & Games</h2>
+  <ng-container *ngIf="puzzlesAndGamesList; else emptyList">
+    <div class="list">
+      <div class="item" *ngFor="let item of puzzlesAndGamesList">
+        <div class="item-img"></div>
+        <h3 class="item-name">{{item.name}}</h3>
+        <p class="item-description">{{item.description}}</p>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyList>
+    <div>Empty list</div>
+  </ng-template>
+</div>
