@@ -1,12 +1,26 @@
-// grid
+// GRID
 $container-xxl: 1600px;
 $container-xl: 1300px;
 
 // COLORS
+$color-primary: #0787ca;
 
 // font
 $color-red: #db3334;
 $color-black: #000000;
+$color-dark: #333333;
+$color-white: #ffffff;
 
 // borders
 $color-border: #e5e5e5;
+
+// SHADOWS
+$box-shadow-header: rgb(0 0 0 / 10%) 0px 2px 4px;
+
+// TRANSITIONS
+$transition-default: all .2s ease-in-out;
+
+// WEIGHTS
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;

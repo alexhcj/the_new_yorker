@@ -1,15 +1,19 @@
 <header class="header">
   <div class="header-main">
-    <div class="advert"></div>
-    <a routerLink="/" class="logo">
-      <span class="logo_text text-first">The</span>
-      <span class="logo_text">New yorker</span>
+    <!-- TODO: refactor to component. This block could be different (content, meta) -->
+    <a routerLink="/" class="promo">
+      <img class="flash-sale__link" src="./assets/img/home/header/subscribe-sale.png" alt="Flash sale. 12 weeks for 6$. Cancel anytime." />
+    </a>
+    <a routerLink="/">
+      <img class="logo" src="./assets/svg/logo.svg" alt="The New Yorker logotype">
     </a>
     <div class="header-right">
       <div class="newsletter">Newsletter</div>
       <div class="sign-in">Sign in</div>
-      <a class="btn" routerLink="/subscribe" target="_blank">Subscribe</a>
-      <input type="text" value="search">
+      <a class="btn btn-primary" routerLink="/subscribe" target="_blank">Subscribe</a>
+      <a class="search" routerLink="/" target="_blank">
+        <img src="./assets/svg/search.svg" alt="Search">
+      </a>
     </div>
   </div>
   <nav class="nav">
