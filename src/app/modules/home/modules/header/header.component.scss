@@ -1,4 +1,4 @@
-@import '../../../../shared/styles/vars';
+@import '../../../../shared/styles/mixins';
 
 .header {
   box-shadow: $box-shadow-header;
@@ -37,9 +37,10 @@
 }
 .newsletter,
 .sign-in {
-  font-size: 12px;
+  text-transform: capitalize;
   color: $color-black;
   transition: $transition-default;
+  @include font(family-graphik, 12px, medium);
   cursor: pointer;
 
   &:hover {
@@ -53,8 +54,7 @@
   width: 121px;
   height: 30px;
   line-height: 30px;
-  font-size: 12px;
-  font-weight: $weight-500;
+  @include font(family-graphik-web, 12px, medium);
   background-color: $color-primary;
   color: $color-white;
 
