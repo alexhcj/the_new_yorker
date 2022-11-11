@@ -18,7 +18,7 @@ export class RightPostsComponent implements OnInit {
 
   ngOnInit(): void {
     this._subscription.add(
-      this.heroService.getPosts().pipe(
+      this.heroService.getPostsRightLayout().pipe(
         tap((posts) => this.rightPosts = posts)
       ).subscribe()
     )
