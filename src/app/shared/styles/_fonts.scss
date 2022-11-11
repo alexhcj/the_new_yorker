@@ -1,0 +1,43 @@
+@import './mixins';
+
+// FONT LAYERS
+// font-family: TNYAdobeCaslonPro (1-st layer), "Times New Roman" (2-nd layer), Times (3-rd layer), serif;
+
+// NOTES
+// 1-st local resource fallback is for Windows, 2-nd for macOS (font_full_name-font_weight) "HelveticaNeue-Regular"
+
+// *** 1 LAYER ***
+// Graphik
+@include font-face("Graphik", "../../../assets/fonts/Graphik/Regular/Graphik-Regular", regular, null, woff2 woff ttf);
+@include font-face("Graphik", "../../../assets/fonts/Graphik/Medium/Graphik-Medium", medium, null, woff2 woff ttf);
+
+// GraphikWeb
+@include font-face("GraphikWeb", "../../../assets/fonts/GraphikWeb/Medium/GraphikWeb-Medium", medium, null, woff2);
+
+// Adobe Caslon Pro
+@include font-face("Adobe Caslon Pro", "../../../assets/fonts/AdobeCaslonPro/Regular/AdobeCaslonPro-Regular", regular, null, woff2);
+@include font-face("Adobe Caslon Pro", "../../../assets/fonts/AdobeCaslonPro/Regular/AdobeCaslonPro-Regular-Italic", regular, italic, woff2);
+
+// IrvinText
+@include font-face("IrvinText", "../../../assets/fonts/IrvinText/Regular/IrvinText-Regular", regular, null, woff);
+
+// IrvinHeadingWeb
+@include font-face("IrvinHeadingWeb", "../../../assets/fonts/IrvinHeadingWeb/Regular/IrvinHeadingWeb-Regular", regular, null, woff);
+
+// Neutraface New Yorker
+@include font-face("Neutraface New Yorker", "../../../assets/fonts/NeutrafaceNewYorker/SemiBold/NeutrafaceNewYorker-SemiBold", semi-bold, null, woff2);
+
+// *** 2 LAYER ***
+// Helvetica Neue
+@include font-face("Helvetica Neue", "../../../assets/fonts/HelveticaNeue/Medium/HelveticaNeue-Medium", medium, null, otf);
+
+// Times New Roman
+@include font-face("Times New Roman", "../../../assets/fonts/TimesNewRoman/Regular/TimesNewRoman-Regular", regular, null, woff ttf);
+
+// Georgia
+@include font-face("Georgia", "../../../assets/fonts/Georgia/Regular/Georgia-Regular", regular, null, woff ttf);
+
+// IMPROVEMENTS
+// TODO: find or convert another font formats (ttf, woff)
+// TODO: test in different OS
+// TODO: IE support?

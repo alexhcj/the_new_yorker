@@ -1,0 +1,89 @@
+@use './functions';
+@import './vars';
+
+@mixin font-weight($weight) {
+  $weights: (
+    thin: 100,
+    extra-light: 200,
+    ultra-light: 200,
+    light: 300,
+    normal: 400,
+    book: 400,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    demi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    ultra-bold: 900,
+    heavy: 900,
+    black: 900,
+    ultra: 900,
+    ultra-black: 900,
+    extra-ultra: 900
+  );
+
+  $output: $weight;
+
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+
+  font-weight: $output;
+}
+
+// font families combos
+@mixin font-family($family) {
+  $families: (
+    family-adobe: $font-family-adobe,
+    family-adobe-italic: $font-family-adobe-italic,
+    family-graphik: $font-family-graphik,
+    family-graphik-web: $font-family-graphik-web,
+    family-irvin-text: $font-family-irvin-text,
+    family-irvin-heading: $font-family-irvin-heading,
+    family-neutraface: $font-family-neutraface
+  );
+
+  $output: $family;
+  @if map-has-key($families, $family) {
+    $output: map-get($families, $family);
+  }
+
+  font-family: $output;
+}
+
+// use to customize font
+@mixin font($family: $base-font-family, $size: $base-font-size, $weight: 400, $style: normal) {
+  font-size: $size;
+  @include font-weight($weight);
+  font-style: $style;
+  @include font-family($family);
+}
+
+// create @font-face rule with full extensions support
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff otf ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + functions.str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    @include font-weight($weight);
+    src: local($name), local(functions.str-remove-whitespace($name) + "-" + functions.font-weight-str($weight)), $src;
+  }
+}

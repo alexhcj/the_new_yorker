@@ -1,1 +1,11 @@
 @import './app/shared/styles/reset';
+@import './app/shared/styles/fonts';
+
+html {
+  //font-size: $base-font-size;
+}
+body {
+  //font-size: 21px;
+  //line-height: 1.5em;
+  font-family: $base-font-family;
+}

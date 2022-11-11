@@ -24,3 +24,19 @@ $transition-default: all .2s ease-in-out;
 $weight-500: 500;
 $weight-600: 600;
 $weight-700: 700;
+
+// FONT FAMILIES
+// *** 1-st layer ***
+$font-family-adobe: "Adobe Caslon Pro", "Times New Roman", Times, serif;
+$font-family-adobe-italic: "Adobe Caslon Pro", "Times New Roman", Times, serif;
+$font-family-graphik: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-graphik-web: GraphikWeb, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-irvin-text: IrvinText, Georgia, "Times New Roman", Times, serif;
+$font-family-irvin-heading: IrvinHeading, Georgia, "Times New Roman", Times, serif;
+
+// *** 2-nd layer ***
+$font-family-neutraface: "Neutraface New Yorker", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// BASE
+$base-font-family: $font-family-adobe;
+$base-font-size: 16px;

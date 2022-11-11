@@ -1,0 +1,49 @@
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// for macOS font-family src local name ("Name-Regular")
+@function font-weight-str($weight) {
+  $weights: (
+    thin: "Thin",
+    extra-light: "ExtraLight",
+    ultra-light: "UltraLight",
+    light: "Light",
+    normal: "Normal",
+    book: "Book",
+    regular: "Regular",
+    medium: "Medium",
+    semi-bold: "SemiBold",
+    demi-bold: "DemiBold",
+    bold: "Bold",
+    extra-bold: "ExtraBold",
+    ultra-bold: "UltraBold",
+    heavy: "Heavy",
+    black: "Black",
+    ultra: "Ultra",
+    ultra-black: "UltraBlack",
+    extra-ultra: "EtraUltra"
+  );
+
+  $output: null;
+
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+
+  @return $output;
+}
+
+@function str-remove-whitespace($str) {
+  @while (str-index($str, ' ') != null) {
+    $index: str-index($str, ' ');
+    $str: "#{str-slice($str, 0, $index - 1)}#{str-slice($str, $index + 1)}";
+  }
+  @return $str;
+}
