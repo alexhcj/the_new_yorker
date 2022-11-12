@@ -18,7 +18,7 @@ export class CenterPostComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._subscription.add(
-      this.heroService.getPost().pipe(
+      this.heroService.getPostCenterLayout().pipe(
         tap((post) => this.centerPost = post)
       ).subscribe()
     )
