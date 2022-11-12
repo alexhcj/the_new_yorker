@@ -18,7 +18,7 @@ export class UnderCenterPostComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._subscription.add(
-      this.heroService.getPost().pipe(
+      this.heroService.getPostUnderCenterLayout().pipe(
         tap((post) => this.underPost = post)
       ).subscribe()
     )
