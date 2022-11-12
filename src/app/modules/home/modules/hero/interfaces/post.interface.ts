@@ -3,7 +3,7 @@ export interface PostInterface {
   title: string
   summary: string
   body: string
-  category: string
+  rubric: string
   author: string
   img: string
 }

@@ -2,7 +2,7 @@
   <ng-container *ngIf="leftPosts; else emptyPosts">
     <div class="post" *ngFor="let post of leftPosts">
       <img class="post-img" src="{{post.img}}" alt="{{post.title}}">
-      <a class="category" routerLink="/">{{post.category}}</a>
+      <a class="category" routerLink="/">{{post.rubric}}</a>
       <h3 class="title">
         <a class="title__link" routerLink="/">{{post.title}}</a>
       </h3>
