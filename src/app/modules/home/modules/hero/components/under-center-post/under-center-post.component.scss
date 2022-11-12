@@ -1,18 +1,67 @@
+@import '../../../../../../shared/styles/mixins';
+
 .post {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: "content content img";
+  grid-column-gap: 32px;
 }
 .post-content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
-.post-img {
-  width: 192px;
-  height: 144px;
-  background-color: #ababab;
+.rubric-link {
+  margin-bottom: 8px;
+  color: $color-red;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.rubric {
+  text-transform: uppercase;
+  line-height: 1.33333em;
+  @include font(family-irvin-text, 12px);
+}
+.title-link {
+  margin-bottom: 16px;
+  color: $color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .title {
-  font-size: 20px;
-  font-weight: 600;
+  line-height: 1.2em;
+  @include font(family-irvin-heading-web, 20px);
+}
+.summary {
+  margin-bottom: 8px;
+  line-height: 1.4em;
+  @include font(family-adobe, 20px);
+  color: $color-black;
+}
+.byline {
+  display: inline-flex;
+  gap: 3px;
+  padding-bottom: 4px;
+  line-height: 1.33333em;
+  @include font(family-neutraface, 15px, semi-bold);
+  color: $color-dark-2;
+
+  &_name {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.img-link {
+  grid-area: img;
+  flex: 1 0 218px;
+  width: 218px;
+  height: 164px;
 }
