@@ -1,9 +1,58 @@
-.post-img {
+@import '../../../../../../shared/styles/mixins';
+
+.img-link {
+  display: flex;
+  margin-bottom: 16px;
   width: 100%;
-  height: 300px;
+  height: 540px;
   background-color: #ababab;
 }
+.rubric-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: $color-red;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.rubric {
+  text-transform: uppercase;
+  line-height: 1.33333em;
+  @include font(family-irvin-text, 12px);
+}
+.title-link {
+  display: block;
+  margin-bottom: 16px;
+  color: $color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .title {
-  font-size: 20px;
-  font-weight: 600;
+  line-height: 1.25em;
+  @include font(family-irvin-heading-web, 32px);
+}
+.summary {
+  margin-bottom: 8px;
+  line-height: 1.4em;
+  @include font(family-adobe, 20px);
+  color: $color-black;
+}
+.byline {
+  display: inline-flex;
+  gap: 3px;
+  padding-bottom: 4px;
+  line-height: 1.33333em;
+  @include font(family-neutraface, 15px, semi-bold);
+  color: $color-dark-2;
+
+  &_name {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

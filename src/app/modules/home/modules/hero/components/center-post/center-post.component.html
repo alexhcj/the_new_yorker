@@ -1,9 +1,16 @@
 <div class="post">
-  <img src="{{centerPost.img}}" alt="{{centerPost.title}}">
-  <span class="category">{{centerPost.category}}</span>
-  <h3 class="title">{{centerPost.title}}</h3>
-  <p class="body">{{centerPost.body}}</p>
-  <div>
-    By <span class="author">{{centerPost.author}}</span>
-  </div>
+  <a class="img-link" routerLink="/">
+    <img src="{{centerPost.img}}" alt="{{centerPost.title}}">
+  </a>
+  <a class="rubric-link" routerLink="/">
+    <span class="rubric">{{centerPost.rubric}}</span>
+  </a>
+  <a class="title-link" routerLink="/">
+    <h3 class="title">{{centerPost.title}}</h3>
+  </a>
+  <p class="summary">{{centerPost.summary}}</p>
+  <span class="byline">
+    <span class="byline_preamble">By</span>
+    <a class="byline_name" routerLink="/">{{centerPost.author}}</a>
+  </span>
 </div>
