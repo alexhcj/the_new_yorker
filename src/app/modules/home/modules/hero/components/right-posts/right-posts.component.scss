@@ -1,25 +1,77 @@
+@import '../../../../../../shared/styles/mixins';
+
+.block {
+  padding: 15px;
+  border-left: 1px solid $color-border;
+
+  &_title {
+    padding-bottom: 8px;
+    text-transform: capitalize;
+    @include font(family-adobe-italic, 22px, regular, italic);
+  }
+}
 .posts {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 15px;
 }
 .post {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0 16px 0;
+  border-top: 1px solid $color-border;
 }
 .post-content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
 }
-.post-img {
+.rubric-link {
+  text-decoration: none;
+  color: $color-red;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.rubric {
+  text-transform: uppercase;
+  line-height: 1.33333em;
+  @include font(family-irvin-text, 12px);
+}
+.img-link {
+  display: flex;
+  flex: 1 0 75px;
   width: 75px;
   height: 56px;
   background-color: #ababab;
 }
+.title-link {
+  text-decoration: none;
+  color: $color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .title {
-  font-size: 18px;
-  font-weight: 600;
+  line-height: 1.2em;
+  @include font(family-adobe, 20px);
+}
+.byline {
+  display: flex;
+  gap: 3px;
+  @include font(family-neutraface, 15px, semi-bold);
+  color: $color-dark-2;
+
+  &_name {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

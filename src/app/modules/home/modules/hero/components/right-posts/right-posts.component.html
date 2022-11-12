@@ -1,18 +1,28 @@
-<div class="posts">
-  <ng-container *ngIf="rightPosts; else emptyPosts">
-    <div class="post" *ngFor="let post of rightPosts">
-      <div class="post-content">
-        <span class="category">{{post.category}}</span>
-        <h3 class="title">{{post.title}}</h3>
-        <div>
-          By <span class="author">{{post.author}}</span>
+<div class="block">
+  <h3 class="block_title">News & culture</h3>
+  <div class="posts">
+    <ng-container *ngIf="rightPosts; else emptyPosts">
+      <div class="post" *ngFor="let post of rightPosts">
+        <div class="post-content">
+          <a routerLink="/" class="rubric-link">
+            <span class="rubric">{{post.category}}</span>
+          </a>
+          <a class="title-link" routerLink="/">
+            <h2 class="title">{{post.title}}</h2>
+          </a>
+          <span class="byline">
+            <span class="byline_preamble">By</span>
+            <a class="byline_name" routerLink="/">{{post.author}}</a>
+          </span>
         </div>
+        <a class="img-link" routerLink="/">
+          <img class="img" src="{{post.img}}" alt="{{post.title}}" />
+        </a>
       </div>
-      <div class="post-img"></div>
-    </div>
-  </ng-container>
+    </ng-container>
 
-  <ng-template #emptyPosts>
-    <div>Empty posts</div>
-  </ng-template>
+    <ng-template #emptyPosts>
+      <div>Empty posts</div>
+    </ng-template>
+  </div>
 </div>
