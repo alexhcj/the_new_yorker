@@ -1,8 +1,8 @@
 export interface SpotlightPostInterface {
   id: string
   title: string
-  body: string
-  category: string
-  author: string
+  summary: string
+  rubric: string
+  author: string | string[]
   img: string
 }
