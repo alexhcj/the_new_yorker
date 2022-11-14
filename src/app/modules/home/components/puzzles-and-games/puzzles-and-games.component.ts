@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {PuzzlesAndGamesService} from "../../modules/hero/services/puzzles-and-games.service";
 import {Subscription, tap} from "rxjs";
-import {PuzzleInterface} from "../../modules/hero/interfaces/puzzle.interface";
-import {GameInterface} from "../../modules/hero/interfaces/game.interface";
+
+import {PuzzlesAndGamesService} from "./services/puzzles-and-games.service";
+import {GameInterface} from "./interfaces/game.interface";
 
 @Component({
   selector: 'app-puzzles-and-games',
@@ -11,7 +11,7 @@ import {GameInterface} from "../../modules/hero/interfaces/game.interface";
 })
 export class PuzzlesAndGamesComponent implements OnInit {
   private _subscription: Subscription = new Subscription()
-  public puzzlesAndGamesList: PuzzleInterface[] | GameInterface[] = []
+  public puzzlesAndGamesList: GameInterface[] = []
 
   constructor(
     private puzzlesAndGamesService: PuzzlesAndGamesService
