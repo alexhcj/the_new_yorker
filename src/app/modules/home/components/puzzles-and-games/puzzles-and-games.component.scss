@@ -1,29 +1,48 @@
-.puzzles-and-games {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 30px;
+@import '../../../../shared/styles/mixins';
 
-  &__title {
-    margin: 25px 0;
-    padding: 20px 0;
+.puzzles-and-games {
+  margin-bottom: 16px;
+
+  &_title {
+    margin-bottom: 32px;
+    padding: 16px 0;
     text-align: center;
-    font-size: 28px;
-    font-weight: 600;
-    border-top: 1px solid #ababab;
-    border-bottom: 1px solid #ababab;
+    @include font(family-adobe, 24px);
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
 }
 .list {
-  display: flex;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
 }
 .item {
-  display: flex;
-  flex: 1 1 25%;
-  flex-direction: column;
+  grid-column: span 3 / auto;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
-.item-img {
+.img-link {
+  display: flex;
+  margin-bottom: 16px;
   width: 100%;
-  height: 100px;
-  background-color: olive;
+}
+.name-link {
+  display: block;
+  margin-bottom: 16px;
+  color: $color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.name {
+  line-height: 1.25em;
+  @include font(family-irvin-heading-web, 20px);
+}
+.summary {
+  margin-bottom: 8px;
+  line-height: 1.4em;
+  @include font(family-adobe, 18px);
+  color: $color-black;
 }
