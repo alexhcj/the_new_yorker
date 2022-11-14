@@ -1,15 +1,22 @@
 <div class="spotlight">
-  <h2 class="spotlight__title">Spotlight</h2>
+  <h2 class="spotlight_title">Spotlight</h2>
   <ng-container *ngIf="spotlightList; else emptyList">
     <div class="list">
       <div class="item" *ngFor="let item of spotlightList">
-        <img class="item-img" src="{{item.img}}" alt="{{item.title}}">
-        <div class="item-content">
-          <span class="item-category">{{item.category}}</span>
-          <h3 class="item-title">{{item.title}}</h3>
-          <p class="item-description">{{item.body}}</p>
-          <span class="item-author">By {{item.author}}</span>
-        </div>
+        <a class="img-link" routerLink="/">
+          <img src="{{item.img}}" alt="{{item.title}}">
+        </a>
+        <a class="rubric-link" routerLink="/">
+          <span class="rubric">{{item.rubric}}</span>
+        </a>
+        <a class="title-link" routerLink="/">
+          <h3 class="title">{{item.title}}</h3>
+        </a>
+        <p class="summary">{{item.summary}}</p>
+        <span class="byline">
+          <span class="byline_preamble">By</span>
+          <a class="byline_name" routerLink="/">{{item.author}}</a>
+        </span>
       </div>
     </div>
   </ng-container>

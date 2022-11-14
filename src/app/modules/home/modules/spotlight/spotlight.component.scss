@@ -1,63 +1,75 @@
-.spotlight {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 30px;
+@import '../../../../shared/styles/mixins';
 
-  &__title {
-    margin: 25px 0;
-    padding: 20px 0;
+.spotlight {
+  &_title {
+    margin-bottom: 32px;
+    padding: 16px 0;
     text-align: center;
-    font-size: 24px;
-    border-top: 1px solid #E5E5E5FF;
-    border-bottom: 1px solid #E5E5E5FF;
+    @include font(family-adobe, 24px);
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
   }
 }
 .list {
-  display: flex;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
 }
 .item {
+  grid-column: span 3 / auto;
+  margin-bottom: 32px;
+}
+.img-link {
   display: flex;
-  flex-direction: column;
-  flex: 1 1 25%;
-}
-.item-img {
-  max-width: 304px;
-  max-height: 228px;
-}
-.item-content {
-  padding: 16px 0 32px;
-}
-.item-category {
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 10px;
-  font-size: 12px;
-  color: #db3334;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-.item-title {
-  text-transform: uppercase;
   margin-bottom: 16px;
-  font-size: 20px;
-  color: #000000;
-  cursor: pointer;
+  width: 100%;
+}
+.rubric-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: $color-red;
 
   &:hover {
     text-decoration: underline;
   }
 }
-.item-description {
-  margin-bottom: 18px;
-  font-size: 18px;
-  color: #000000;
+.rubric {
+  text-transform: uppercase;
+  line-height: 1.33333em;
+  @include font(family-irvin-text, 12px);
 }
-.item-author {
-  font-size: 15px;
-  font-weight: 600;
-  color: #121212;
+.title-link {
+  display: block;
+  margin-bottom: 16px;
+  color: $color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.title {
+  line-height: 1.25em;
+  @include font(family-irvin-heading-web, 20px);
+}
+.summary {
+  margin-bottom: 8px;
+  line-height: 1.4em;
+  @include font(family-adobe, 18px);
+  color: $color-black;
+}
+.byline {
+  display: inline-flex;
+  gap: 3px;
+  padding-bottom: 4px;
+  line-height: 1.33333em;
+  @include font(family-neutraface, 15px, semi-bold);
+  color: $color-dark-2;
+
+  &_name {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
