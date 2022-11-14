@@ -9,7 +9,7 @@ import {SectionPostListModule} from "../../shared/modules/section-post-list/sect
 import {LayoutComponent} from "./components/layout/layout.component";
 import {HomeComponent} from "./home.component";
 import { SubscribeSectionComponent } from './components/subscribe-section/subscribe-section.component';
-import {PuzzlesAndGamesModule} from "./components/puzzles-and-games/puzzles-and-games.module";
+import {PuzzlesAndGamesModule} from "./modules/puzzles-and-games/puzzles-and-games.module";
 
 
 @NgModule({

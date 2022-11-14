@@ -9,7 +9,7 @@ import { LeftPostsComponent } from './components/left-posts/left-posts.component
 import { RightPostsComponent } from './components/right-posts/right-posts.component';
 import { CenterPostComponent } from './components/center-post/center-post.component';
 import { UnderCenterPostComponent } from './components/under-center-post/under-center-post.component';
-import {PuzzlesAndGamesService} from "../../components/puzzles-and-games/services/puzzles-and-games.service";
+import {PuzzlesAndGamesService} from "../puzzles-and-games/services/puzzles-and-games.service";
 
 
 @NgModule({
