@@ -18,7 +18,7 @@ export class LeftPostsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._subscription.add(
-      this.heroService.getPosts().pipe(
+      this.heroService.getPostsLeftLayout().pipe(
         tap((posts) => this.leftPosts = posts)
       ).subscribe()
     )
