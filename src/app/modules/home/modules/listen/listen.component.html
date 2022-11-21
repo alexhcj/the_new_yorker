@@ -1,0 +1,34 @@
+<div class="listen">
+  <h2 class="listen_title">Listen to <em class="italic">The New Yorker</em></h2>
+  <p class="mob-app-promo italic">
+    Catch up where and when it suits you. For easy listening,
+    <a class="mob-app-promo_link" routerLink="/">download the New Yorker app</a>
+  </p>
+  <ng-container *ngIf="recordsList; else emptyList">
+    <div class="list">
+      <div class="item" *ngFor="let item of recordsList">
+        <a class="img-link" routerLink="/">
+          <img src="{{item.img}}" alt="{{item.title}}">
+          <div class="img-link_icon">
+            <img class="icon-audio" src="./assets/svg/headphone.svg" alt="Audio available">
+          </div>
+        </a>
+        <a class="rubric-link" routerLink="/">
+          <span class="rubric">{{item.rubric}}</span>
+        </a>
+        <a class="title-link" routerLink="/">
+          <h3 class="title">{{item.title}}</h3>
+        </a>
+        <p class="summary">{{item.summary}}</p>
+        <span class="byline">
+          <span class="byline_preamble">By</span>
+          <a class="byline_name" routerLink="/">{{item.author}}</a>
+        </span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyList>
+    <div>Empty list</div>
+  </ng-template>
+</div>

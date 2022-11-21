@@ -10,6 +10,7 @@ import {LayoutComponent} from "./components/layout/layout.component";
 import {HomeComponent} from "./home.component";
 import { PromoSectionComponent } from './components/subscribe-section/promo-section.component';
 import {PuzzlesAndGamesModule} from "./modules/puzzles-and-games/puzzles-and-games.module";
+import {ListenModule} from "./modules/listen/listen.module";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {PuzzlesAndGamesModule} from "./modules/puzzles-and-games/puzzles-and-gam
     SectionPostListModule,
     HeroModule,
     SpotlightModule,
-    PuzzlesAndGamesModule
+    PuzzlesAndGamesModule,
+    ListenModule
   ],
   exports: [HomeComponent, LayoutComponent]
 })
