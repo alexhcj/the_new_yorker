@@ -8,7 +8,7 @@ import {SpotlightModule} from "./modules/spotlight/spotlight.module";
 import {SectionPostListModule} from "../../shared/modules/section-post-list/section-post-list.module";
 import {LayoutComponent} from "./components/layout/layout.component";
 import {HomeComponent} from "./home.component";
-import { PromoSectionComponent } from './components/subscribe-section/promo-section.component';
+import { PromoSectionComponent } from './components/promo-section/promo-section.component';
 import {PuzzlesAndGamesModule} from "./modules/puzzles-and-games/puzzles-and-games.module";
 import {ListenModule} from "./modules/listen/listen.module";
 
