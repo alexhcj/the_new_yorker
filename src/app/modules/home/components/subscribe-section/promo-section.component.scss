@@ -1,6 +1,6 @@
 @import '../../../../shared/styles/mixins';
 
-.subscribe {
+:host ::ng-deep section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,12 +9,12 @@
   border-top: 1px solid $color-border;
   border-bottom: 1px solid $color-border;
 
-  &_text {
+  h3 {
     color: $color-black;
     @include font(family-adobe, 20px);
   }
 
-  &_button {
+  a {
     margin-left: 8px;
     text-decoration: underline;
     color: $color-primary;
@@ -26,10 +26,10 @@
     }
   }
 }
-.text-company {
+:host ::ng-deep .text-company {
   font-style: italic;
 }
-.logo-standard {
+:host ::ng-deep .logo-standard {
   margin-right: 16px;
   max-width: 75px;
   max-height: 75px;

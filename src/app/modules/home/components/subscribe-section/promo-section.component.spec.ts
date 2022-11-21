@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubscribeSectionComponent } from './subscribe-section.component';
+import { PromoSectionComponent } from './promo-section.component';
 
 describe('SubscribeBannerComponent', () => {
-  let component: SubscribeSectionComponent;
-  let fixture: ComponentFixture<SubscribeSectionComponent>;
+  let component: PromoSectionComponent;
+  let fixture: ComponentFixture<PromoSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubscribeSectionComponent ]
+      declarations: [ PromoSectionComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SubscribeSectionComponent);
+    fixture = TestBed.createComponent(PromoSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
