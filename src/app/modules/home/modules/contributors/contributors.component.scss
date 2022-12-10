@@ -1,0 +1,102 @@
+@import '../../../../shared/styles/mixins';
+
+.contributors {
+  padding-right: 32px;
+  border-right: 1px solid $color-border;
+
+  &_title {
+    margin-bottom: 16px;
+    padding: 16px 0;
+    @include font(family-adobe, 20px);
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+  }
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+}
+.item {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  grid-column: span 6 / auto;
+  padding: 24px 0;
+  border-bottom: 1px solid $color-border;
+
+  &:nth-child(-n+2) {
+    padding: 8px 0 24px;
+  }
+
+  &:nth-child(odd) {
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: calc(-1 * 32px / 2);
+      width: 1px;
+      height: calc(100% + 1px);
+      background-color: $color-border;
+    }
+  }
+
+  &:nth-child(n+3) {
+    .img-link {
+      top: 24px;
+    }
+  }
+}
+.img-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $color-border;
+  opacity: .8;
+}
+.rubric-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: $color-red;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.rubric {
+  text-transform: uppercase;
+  line-height: 1.33333em;
+  @include font(family-irvin-text, 12px);
+}
+.title-link {
+  display: block;
+  margin-bottom: 16px;
+  color: $color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.title {
+  line-height: 1.25em;
+  @include font(family-adobe, 18px);
+}
+.byline {
+  display: inline-flex;
+  gap: 3px;
+  margin-bottom: 4px;
+  line-height: 1.33333em;
+  @include font(family-irvin-text, 12px);
+  color: $color-black;
+
+  &_author {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

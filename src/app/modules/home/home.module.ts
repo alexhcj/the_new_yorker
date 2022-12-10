@@ -11,6 +11,7 @@ import {HomeComponent} from "./home.component";
 import { PromoSectionComponent } from './components/promo-section/promo-section.component';
 import {PuzzlesAndGamesModule} from "./modules/puzzles-and-games/puzzles-and-games.module";
 import {ListenModule} from "./modules/listen/listen.module";
+import {ContributorsModule} from "./modules/contributors/contributors.module";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {ListenModule} from "./modules/listen/listen.module";
     HeroModule,
     SpotlightModule,
     PuzzlesAndGamesModule,
-    ListenModule
+    ListenModule,
+    ContributorsModule
   ],
   exports: [HomeComponent, LayoutComponent]
 })

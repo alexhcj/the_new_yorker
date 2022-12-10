@@ -8,3 +8,7 @@
   max-width: $container-xxl;
   width: 100%;
 }
+.half-module {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

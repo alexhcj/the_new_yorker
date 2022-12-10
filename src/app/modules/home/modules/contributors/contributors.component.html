@@ -1,0 +1,25 @@
+<section class="contributors">
+  <h2 class="contributors_title">Contributors</h2>
+  <ng-container *ngIf="contributorsList; else emptyList">
+    <div class="list">
+      <div class="item" *ngFor="let item of contributorsList">
+        <a class="img-link" routerLink="/">
+          <img class="img" src="{{item.img}}" alt="{{item.author}}">
+        </a>
+        <span class="byline">
+          <a class="byline_author" routerLink="/">{{item.author}}</a>
+        </span>
+        <a class="rubric-link" routerLink="/">
+          <span class="rubric">{{item.rubric}}</span>
+        </a>
+        <a class="title-link" routerLink="/">
+          <h3 class="title">{{item.title}}</h3>
+        </a>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyList>
+    <div>Empty list</div>
+  </ng-template>
+</section>
